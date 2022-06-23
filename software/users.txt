@@ -1,0 +1,9 @@
+root password set to 'prodevco'
+
+development/service account: mmtools, password set to 'mmtools'
+debian:temppwd account disabled
+cannot ssh as root
+
+mmtools must use 'sudo' do get root privilages
+
+

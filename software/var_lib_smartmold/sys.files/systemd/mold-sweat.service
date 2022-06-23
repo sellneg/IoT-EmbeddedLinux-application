@@ -1,0 +1,8 @@
+[Unit]
+Description=Mold Sweat Logger
+
+[Service]
+Type=simple
+StandardError=journal
+User=root
+ExecStart=/var/lib/smartmold/scripts/moldsweat-data.sh

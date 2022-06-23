@@ -1,0 +1,8 @@
+[Unit]
+Description=Smart Mold mold sweat graph creator
+
+[Service]
+Type=simple
+StandardError=journal
+User=smartmold
+ExecStart=/var/lib/smartmold/scripts/create-graphs.sh

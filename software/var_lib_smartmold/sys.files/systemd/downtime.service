@@ -1,0 +1,8 @@
+[Unit]
+Description=Downtime Logger
+
+[Service]
+Type=simple
+StandardError=journal
+User=smartmold
+ExecStart=/var/lib/smartmold/scripts/downtime.sh

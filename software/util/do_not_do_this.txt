@@ -1,0 +1,40 @@
+!!!!!   George removed ssh for root 2018-04-10
+!
+! /etc/ssh/sshd_config
+! 	PermitRootLogin yes --> PermitRootLogin without-password
+!	PermitEmptyPasswords yes --> PermitEmptyPasswords No
+!	UsePAM no --> UsePAM Yes
+!
+! Also locked-down Debian and Admin users
+!
+!	disable the user account
+!		## lock down user user ##
+!		passwd -l user
+!		##  unlock user user ##
+!		passwd -u user
+!	Use the following command so that tom can not login
+!	using ssh based public keys
+!		chage -E 0 user
+!
+
+	
+From https://elinux.org/Beagleboard:BeagleBoneBlack_Debian#i_take_full_responsibility_for_knowing_my_beagle_is_now_insecure
+
+i take full responsibility for knowing my beagle is now insecure
+
+as of 2017-02-19, BeagleBoard images now longer enable these insecure options by default, you are free to recreate them as you wish.
+remove root password
+
+root_password=$(cat /etc/shadow | grep root | awk -F ':' '{print $2}')
+sed -i -e 's:'$root_password'::g' /etc/shadow
+
+ssh root@beaglebone.local
+
+sed -i -e 's:PermitEmptyPasswords no:PermitEmptyPasswords yes:g' /etc/ssh/sshd_config
+sed -i -e 's:UsePAM yes:UsePAM no:g' /etc/ssh/sshd_config
+sed -i -e 's:PermitRootLogin without-password:PermitRootLogin yes:g' /etc/ssh/sshd_config
+
+sudo no password required
+
+echo "debian  ALL=NOPASSWD: ALL" >>/etc/sudoers
+

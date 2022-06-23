@@ -1,0 +1,13 @@
+[Unit]
+Description=Smart Mold mold sweat graph creator timer
+
+[Timer]
+# Define target unit (in case the name part is the same, can be omitted)
+Unit=mold-sweat-create-graphs.service
+## Activate target based on wallclock time (calendar event)
+
+# Define a calendar event (see `man systemd.time`)
+OnCalendar=hourly
+
+[Install]
+WantedBy=multi-user.target
