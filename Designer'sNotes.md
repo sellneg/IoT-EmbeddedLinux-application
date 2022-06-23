@@ -327,6 +327,7 @@ mmtools@osboxes:~$ sudo nano /etc/hosts
 mmtools@osboxes:~$ sudo systemctl status sendmail.service
 mmtools@osboxes:~$ sudo nano /etc/mail/sendmail.cf
 mmtools@osboxes:~$ sudo cat /etc/mail/sendmail.cf
+```
 #
 #   Copyright (c) 1998-2005 Richard Nelson.  All Rights Reserved.
 #
@@ -2334,7 +2335,7 @@ A=TCP $h
 # MAILER(`local')dnl
 # MAILER(`smtp')dnl
 # 
-
+```
 
 
 
@@ -2539,7 +2540,7 @@ Best regards,
 
 Rhett
 
-7/4/2017 Email received from Rhett Evans [[R.Evans@andersdx.com](mailto:R.Evans@andersdx.com)]
+7/4/2017 Email received from Rhett Evans 
 
 Hi George, 
 
@@ -2551,7 +2552,7 @@ Best regards
 
 Rhett
 
-7/4/2017 Email sent to Rhett Evans [[R.Evans@andersdx.com](mailto:R.Evans@andersdx.com)]
+7/4/2017 Email sent to Rhett Evans
 
 Hello Rhett,
 
@@ -2585,7 +2586,7 @@ Thanks
 | OS Support               | Linux/Linux Yocto | Linux/Linux Yocto |
 
 
-7/3/2017 Email received from Rhett Evans [[R.Evans@andersdx.com](mailto:R.Evans@andersdx.com)]
+7/3/2017 Email received from Rhett Evans
 
 Hi Thai, 
 
@@ -2606,9 +2607,7 @@ Best regards
 Rhett
 
 Rhett Evans         |  Embedded Systems Sales 
-Follow Us:           
-anders electronics plc | Kings Studios, 43 – 45 Kings Terrace, Camden, London NW1 0JR
-anders electronics plc  |  T: +44(0)7811 336579 |  E: [r.evans@andersDX.com](mailto:r.evans@andersDX.com)  |  www.andersDX.com
+
 
 # GumStix
 Created Tuesday 09 January 2018
